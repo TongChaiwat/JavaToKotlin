@@ -3,12 +3,12 @@ package com.example.javatokotlin
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
-import android.preference.PreferenceManager
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.TextView
 
 import androidx.appcompat.app.AppCompatActivity
+import androidx.preference.PreferenceManager
 import com.example.javatokotlin.extention.getColorCompat
 import com.example.javatokotlin.extention.toast
 import kotlinx.android.synthetic.main.activity_main.*

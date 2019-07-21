@@ -2,8 +2,8 @@ package com.example.javatokotlin
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.preference.PreferenceManager
 import android.view.MenuItem
+import androidx.preference.PreferenceManager
 import kotlinx.android.synthetic.main.activity_second.*
 
 class SecondActivity : AppCompatActivity() {
@@ -14,6 +14,8 @@ class SecondActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+
 
         with(sharePreference) {
             firstRangeTextView.text = getInt(MainActivity.FIRST_RANGE_COUNTER, 0).toString()
