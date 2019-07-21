@@ -1,4 +1,4 @@
-package com.example.javatokotlin.extention
+package com.example.javatokotlin
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

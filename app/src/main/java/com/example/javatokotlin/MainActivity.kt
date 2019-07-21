@@ -7,7 +7,6 @@ import android.view.MenuItem
 import android.widget.TextView
 
 import androidx.appcompat.app.AppCompatActivity
-import com.example.javatokotlin.extention.SecondActivity
 import com.example.javatokotlin.extention.getColorCompat
 import com.example.javatokotlin.extention.toast
 import kotlinx.android.synthetic.main.activity_main.*
