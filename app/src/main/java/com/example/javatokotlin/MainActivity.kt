@@ -16,6 +16,8 @@ import java.util.Random
 
 class MainActivity : AppCompatActivity() {
 
+    private val defaultNumber: String by lazy { randomInt(50).toString() }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -39,15 +41,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initUi() {
-        numberTextView.text = "0"
-
+        numberTextView.text = defaultNumber
+        updateBackgroundColor(defaultNumber.toInt())
         resetButton.setOnClickListener {
-            numberTextView.text = "0"
-            updateBackgroundColor(0)
+            numberTextView.text = defaultNumber
+            updateBackgroundColor(defaultNumber.toInt())
         }
-
         countButton.setOnClickListener { countMe(numberTextView) }
-
         randomButton.setOnClickListener {
             val randomInt = randomInt(50)
             numberTextView.text = randomInt.toString()
@@ -55,7 +55,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun randomInt(maximum: Int): Int = Random().nextInt(maximum) + 1
+    private fun randomInt(maximum: Int) = Random().nextInt(maximum) + 1
 
     private fun countMe(textView: TextView) {
         val countString = textView.text.toString()
